@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="ToDo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+</head>
+<body>
+    <header>
+        <h1>To Do</h1>
+        <nav id="navigate" >
+            <button class="filter-btn" data-filter="all">All tasks</button>
+            <button class="filter-btn" data-filter="done">Done</button>
+            <button class="filter-btn" data-filter="inProgress">In progress</button>            
+        </nav>
+
+    </header>
+        <div class="tasks_info">
+            <div class="counter">
+                Unfinished tasks: <span id="task_count">0</span>
+            </div>
+            <div class="btns">
+                <button class="checkAll" id="checkAll">Mark all</button>                
+                <button class="delAll" id="delAll">Delete done tasks</button>            
+            </div>
+            
+        </div>
+    <main id="main">
+
+        
+    </main>
+    <input class="add_new" id="button" type="button" value="+" >
+
+    <script src="ToDo.js"></script>
+</body>
+</html>
