@@ -1,0 +1,265 @@
+
+
+
+body{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: rgb(227, 247, 255);
+    width: 99vw;
+    font-family:Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* header */
+header{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    /* grid-template-columns: repeat(2, 1fr); */
+    background-color: rgb(176, 199, 209);
+    border-radius: 10px;
+    width: 99vw;
+}
+
+img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin-left:15px ;
+    margin-top: 15px;
+}
+
+.header-ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    gap: 15vw;
+
+    margin-left: 0px;
+
+}
+
+.header-li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    height: 50px;
+    width: 150px;
+    background-color: rgb(117, 176, 201);  
+    border-radius: 10px;
+  
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.navi {
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgba(54, 94, 103, 0.994);
+    height: 50px;
+    width: 150px;
+    font-size: 24px;
+    margin: 0;
+    padding: 0 ;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10rem;
+}
+
+/* short info only  */
+
+.short-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.short-info h2{
+    margin: 0;
+    font-size: 10rem;
+    text-align: center;
+
+}
+
+.short-info h3{
+    margin: 0;
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+.photo-name {
+    display: flex;
+    justify-content: center  ;
+    text-align: center;
+    gap: 2%;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgba(54, 94, 103, 0.994);
+    
+    
+}
+
+
+main {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    row-gap: 10px;
+    background-color: rgb(176, 199, 209);
+    border-radius: 10px;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+
+section{
+    width: auto;
+    border-radius: 10px;
+    background-color: rgb(162, 183, 192);
+    border: 2px solid rgb(71, 103, 113);
+    box-shadow: 5px 5px 1px rgb(79, 100, 106);
+    padding: 10px;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-bottom: 10px;
+}
+
+hr{
+    justify-content: start;
+    align-items: start;
+    width: 500px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h2{
+    text-align: center;
+    font-size: 3rem;
+    color: rgba(54, 94, 103, 0.994);
+    margin: 0;
+}
+
+
+p {
+    padding-left: 4rem;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    color: rgba(54, 94, 103, 0.994);
+    margin: 0;
+}
+
+
+.main-p {
+    padding-top: 15px;
+}
+
+.p-ul {
+    margin: 0.5rem;
+    padding-left: 5rem;
+    color: rgba(46, 79, 87, 0.994);
+
+}
+
+.main-ul{
+    list-style-type:decimal;
+    color: rgba(54, 94, 103, 0.994);
+    padding-left: 6rem;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+.media-ul{
+    margin: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;   
+    row-gap: 3px;
+    flex-flow: row nowrap;
+    gap: 5rem;
+    list-style-type: none;
+}
+
+.media-li{
+    height: 5rem;
+    width: 5rem;
+}
+.media-a{
+    height: 4rem;
+    width: 4rem;
+
+}
+
+
+
+#tg {
+    font-size: 4rem;
+    margin: 0;
+    color: rgb(48, 114, 134);
+}
+
+#github {
+    font-size: 4.3rem;
+    margin: 0;
+    color: rgb(48, 114, 134);
+}
+
+#inst {
+    font-size: 4.3rem;
+    margin: 0;
+    color: rgb(48, 114, 134);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: rgb(176, 199, 209);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    width: 99vw;
+
+}
+
+
+.footer-h3 {
+    margin: 5px;
+    font-size: 2rem;
+    color: rgba(54, 94, 103, 0.994);
+
+}
+
+.footer-p {
+    padding-left: 20px;
+}
