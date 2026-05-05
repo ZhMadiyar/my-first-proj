@@ -1,6 +1,6 @@
-// 1. Дебаунс (Debounce)
+// дебаунс
 function debounce(fn, delay) {
-    let timer = null; // Живет в замыкании
+    let timer = null; // живет в замыкании
 
     return function (...args) {
         clearTimeout(timer);
@@ -11,7 +11,7 @@ function debounce(fn, delay) {
     };
 }
 
-// 2. Троттл (Throttle)
+// тротл 
 function throttle(fn, limit) {
     let inThrottle = false;
 

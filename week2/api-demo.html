@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Demo - Fetch & Pagination</title>
+
+</head>
+<body>
+
+    <h1>Список дел из API</h1>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Поиск по названию...">
+        <button id="refreshBtn">Обновить данные</button>
+    </div>
+
+    <div id="loader" style="display: none;">Загрузка данных...</div>
+    <div id="error-message" style="color: red;"></div>
+
+    <div id="api-main"></div>
+
+    <div class="pagination">
+        <button id="prevBtn">Предыдущие 10</button>
+        <span id="pageInfo">Страница 1</span>
+        <button id="nextBtn">Следующие 10</button>
+    </div>
+
+    <script src="api.js"></script>
+</body>
+</html>

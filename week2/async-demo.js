@@ -1,4 +1,4 @@
-// 1. Функция с таймаутом (Promise.race)
+// Promise.race
 async function fetchWithTimeout(url, timeoutMs = 5000) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
@@ -13,11 +13,10 @@ async function fetchWithTimeout(url, timeoutMs = 5000) {
     }
 }
 
-// 2. Функция с повторными попытками (Retry)
+// Retry
 async function fetchWithRetry(url, retries = 3, delay = 1000) {
     for (let i = 0; i < retries; i++) {
         try {
-            // Ограничиваем каждую попытку общим таймаутом
             const response = await fetchWithTimeout(url, 5000);
             if (!response.ok) {
                 throw new Error(`Ошибка HTTP: ${response.status}`);
@@ -28,13 +27,12 @@ async function fetchWithRetry(url, retries = 3, delay = 1000) {
             if (i < retries - 1) {
                 await new Promise(res => setTimeout(res, delay));
             } else {
-                throw error; // Если все попытки исчерпаны
+                throw error; 
             }
         }
     }
 }
 
-// 3. Основная логика loadTodos
 async function loadTodos() {
     const loadingEl = document.getElementById('loading');
     const errorEl = document.getElementById('error-message');

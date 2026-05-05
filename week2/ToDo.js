@@ -81,12 +81,7 @@ function editTask(id, text, desc) {
     renderTasks();
 }
 
-function markTask(id){
-    saveToHistory()
-    tasks = tasks.filter(task => task.id !== id)
-    saveToStorage()
-    renderTasks()
-}
+
 
 function toggleTask(id){
     saveToHistory()
@@ -105,23 +100,22 @@ addBtn.addEventListener('click', function(event){
 
 // манипуляция с заданиями 
 main.addEventListener('click', (event) => {
-    // 1. Ищем, кликнули ли по кнопке удаления
+    // кликнули ли по кнопке удаления
     const delBtn = event.target.closest('.delete-btn');
     if (delBtn) {
-        const id = Number(delBtn.dataset.id); // Достаем ID из data-id="${task.id}"
+        const id = Number(delBtn.dataset.id); 
         deleteTask(id);
-        return; // Выходим, чтобы не сработал код ниже
+        return; 
     }
 
-    // 2. Ищем, кликнули ли по чекбоксу
     if (event.target.type === 'checkbox') {
-        // Нам нужно найти родителя, чтобы понять, какой ID у этой задачи
+        
         const id = Number(event.target.closest('.todo_place').querySelector('.delete-btn').dataset.id);
         toggleTask(id);
     }
 });
 
-// Для редактирования задачи 
+// редактор задачи 
 main.addEventListener('dblclick', (event) => {
     if (event.target.classList.contains('task') || event.target.classList.contains('disc')){
         const input = event.target
@@ -168,16 +162,14 @@ delAll.addEventListener('click', (event) => {
 
 
 checkAll.addEventListener('click', (event) => {
-// 1. Проверяем, есть ли хотя бы одна невыполненная задача
+// есть ли невыполненная задача
     const hasActiveTasks = tasks.some(task => !task.completed);
 
-    // 2. Сохраняем историю перед массовым изменением
     saveToHistory();
 
     // 3. Если есть активные — завершаем все. Если нет — сбрасываем все в false.
     tasks = tasks.map(task => ({...task,completed: hasActiveTasks}));
 
-    // 4. Сохраняем и перерисовываем
     saveToStorage();
     renderTasks();
 
@@ -205,7 +197,7 @@ function loadFromStorage() {
     if (rawData) {
         tasks = JSON.parse(rawData);
     } else {
-        tasks = []; // Если пусто вывожу пустой массив
+        tasks = []; // если пусто вывожу пустой массив
     }
     renderTasks();
 }
@@ -235,7 +227,7 @@ function undo() {
         renderTasks();
         saveToStorage(); // сохраняю "откатанное" состояние
     } else {
-        // alert("История пуста");
+        alert("История пуста");
     }
 }
 
